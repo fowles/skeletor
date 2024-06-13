@@ -18,6 +18,15 @@ When you move any event in a skeleton, all of the events in the skeleton will
 adjust times to fit.  Unfortunately, google calendar is a bit slow to update, so
 you may need to count to 5 and then reload your calendar page.
 
+#### How do I move a single event within a skeleton?
+
+You have two options:
+
+1. Create a new event at the appropriate time and delete the old one.
+
+1. Put it in a new skeleton by changing its skeletor key, then move
+   it, and then change its skeletor key back to the original.
+
 ### Errors
 
 If any skeleton has turned red, there is an error with it.  If you feel
@@ -94,3 +103,28 @@ the run.
 1. Change "Failure notification settings" to "Notify me immediately".
 
 1. Select "Save".
+
+## FAQ
+
+### What happens if I delete an event?
+
+It should disappear and leave the rest of the skeleton unaffected.
+
+### Why does this need so many permissions?
+
+Because it needs to read and write your calendar events to move them.
+
+### Why does this have so many untrusted warnings?
+
+Because it is just some code a random person (me) wrote and you probably should
+be careful trusting strangers.
+
+### Can I trust you?
+
+Well, yes.  But that is also what an untrustworthy person would say.
+
+### This is amazing!  How can I ever repay you?  Would my first born child be sufficient?
+
+Umm... that got weird quickly.  Glad you like it.  If you ever run into me in
+person, by me lunch or a coffee or something.  If you don't, try to be a good
+person.
