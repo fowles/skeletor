@@ -62,11 +62,7 @@ change "Google Apps Script API" to "On".
 
 1. Select 'Review Permissions'.
 
-   ![Review Permissions](https://raw.githubusercontent.com/fowles/skeletor/main/docs/review_permissions.png)
-
 1. Select your gmail account.
-
-   ![Choose Account](https://raw.githubusercontent.com/fowles/skeletor/main/docs/choose_account.png)
 
 1. Click the small gray "Advanced" text in the lower left, acknowledging that
    this is not a verified app.
@@ -79,8 +75,6 @@ change "Google Apps Script API" to "On".
    ![Trust Developer](https://raw.githubusercontent.com/fowles/skeletor/main/docs/trust_developer.png)
 
 1. Select "Allow"
-
-   ![Allow Permissions](https://raw.githubusercontent.com/fowles/skeletor/main/docs/allow_permissions.png)
 
 At this point the app should execute, unless you already have configured events,
 you shouldn't see it do much, but it will bring up the console with a log for
