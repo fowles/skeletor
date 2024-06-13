@@ -98,7 +98,10 @@ the run.
 
 1. Change "Failure notification settings" to "Notify me immediately".
 
-1. Select "Save".
+1. Select "Save".  This may require you to go through the permissions flow
+   another time, and may require you to click "Save" twice.
+
+At this point the list of triggers should contain one entry.
 
 ## FAQ
 
