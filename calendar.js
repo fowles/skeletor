@@ -17,9 +17,9 @@ function updateAllSkeletons() {
 }
 
 function getKeyForEvent(e) {
-  let match = (/^skeletor:\s*(.*)$/m).exec(e.getDescription());
+  let match = (/^skeletor:\s*(.*)$/mi).exec(e.getDescription());
   if (!match) return null;
-  return match[1];
+  return match[0].toLowerCase();
 }
 
 function buildSkeletonMap() {
