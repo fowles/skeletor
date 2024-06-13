@@ -1,24 +1,44 @@
-var calendarId =
+const calendarId =
   'd34a7730554333eb96c45c5cc66ef691a120630af8507e670f5a364abfa5e033@group.calendar.google.com';
 // const calendarId = 'primary';
 
-function collectBones() {
-  var calendar = CalendarApp.getOwnedCalendarById(calendarId);
-  var startDate = new Date();
+const skeletorColors = [
+  CalendarApp.EventColor.YELLOW,
+  CalendarApp.EventColor.MAUVE,
+  CalendarApp.EventColor.PALE_BLUE,
+];
+
+function recolorSkeletons() {
+  const skeletons = buildSkeletonMap();
+ 
+  var colorIndex = 0;
+  for (const key in skeletons) {
+    const events = skeletons[key];
+    const color = skeletorColors[colorIndex++ % skeletorColors.length];
+    for (const e of events) {
+      e.setColor(color);
+      console.log(JSON.stringify(e));
+    }
+  }
+}
+
+function buildSkeletonMap() {
+  const calendar = CalendarApp.getOwnedCalendarById(calendarId);
+  const startDate = new Date();
   startDate.setFullYear(startDate.getFullYear() - 1);
-  var endDate = new Date();
+  const endDate = new Date();
   endDate.setFullYear(endDate.getFullYear() + 1);
 
-  var eventsByKey = {};
-  var events = calendar.getEvents(startDate, endDate);
-  for (e of events) {
-    var key = getKeyForEvent(e);
+  const eventsByKey = {};
+  const events = calendar.getEvents(startDate, endDate);
+  for (const e of events) {
+    const key = getKeyForEvent(e);
     if (!key) continue;
 
     var t = e.getTag("skeletor");
     if (t) {
       t = JSON.parse(t);
-      if (t.key != key) {
+      if (t.key !== key) {
         t = null;
       }
     }
@@ -32,17 +52,13 @@ function collectBones() {
     (eventsByKey[key] = eventsByKey[key] || []).push(e);
   }
 
-  console.log(JSON.stringify(eventsByKey));
   return eventsByKey;
 }
 
 function getKeyForEvent(e) {
   var desc = e.getDescription();
   let match = (/^skeletor:\s*(.*)$/m).exec(desc);
-  if (!match) {
-    return null;
-  }
-
+  if (!match) return null;
   return match[1];
 }
 
