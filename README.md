@@ -27,7 +27,9 @@ replace each event with a new one you create from scratch.
 The most common cause of errors is moving two events in a skeleton before
 skeletor has had a chance to move the entire skeleton.
 
-## Installation
+## Installation and Setup
+
+You should only have to do these steps once.
 
 ### Enable App Script for your gmail account.
 
