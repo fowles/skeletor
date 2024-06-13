@@ -8,7 +8,12 @@ move around as a single unit.
 After installation (see below), calendar events will be grouped into
 "skeletons" based on their "skeletor key".
 
-Any event with `skeletor: <key-name>` will be part of the `<key-name>` skeleton.
+### Creating Skeletons
+
+To create a skeleton simply add `skeletor: <key-name>` to an event's
+description.  All events with with `skeletor: <key-name>` in their description
+will be part of the `<key-name>` skeleton.
+
 Skeletor will automatically color `skeletons` so you can easily see which ones
 match.  It may reuse colors if you have a lot of skeletor keys though.
 
