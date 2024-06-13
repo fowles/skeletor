@@ -49,8 +49,8 @@ change "Google Apps Script API" to "On".
 
 1. Go to [App Script Home](https://script.google.com/home)
 1. Click "New Project" in the upper left.
-1. Rename the project from "Unnamed Project" to "Skeletor" by clicking "Unnamed
-   Project" at the top.
+1. Rename the project from "Untitled Project" to "Skeletor" by clicking
+   "Untitled Project" at the top.
 1. Replace the entire contents of `Code.gs` (which should contain an empty
    `myFunction`) with the contents of
    [calendar.js](https://raw.githubusercontent.com/fowles/skeletor/main/calendar.js).
@@ -58,18 +58,20 @@ change "Google Apps Script API" to "On".
 
 ### Grant your copy of skeletor permissions.
 
-1. Run the function `updateAllSkeletons()` via the run button at the top.
+1. Run the function `updateAllSkeletons()` via the small grey run button at the top center.
+
+   ![Run Button](https://raw.githubusercontent.com/fowles/skeletor/main/docs/run_button.png)
 
 1. Select 'Review Permissions'.
 
 1. Select your gmail account.
 
-1. Click the small gray "Advanced" text in the lower left, acknowledging that
+1. Click the small grey "Advanced" text in the lower left, acknowledging that
    this is not a verified app.
 
    ![Unverified App](https://raw.githubusercontent.com/fowles/skeletor/main/docs/unverified_app.png)
 
-1. Select the small gray text that says "Go to Skeletor (unsafe)" in the lower
+1. Select the small grey text that says "Go to Skeletor (unsafe)" in the lower
    left.
 
    ![Trust Developer](https://raw.githubusercontent.com/fowles/skeletor/main/docs/trust_developer.png)
