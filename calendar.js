@@ -12,37 +12,43 @@ function collectBones() {
   var eventsByKey = {};
   var events = calendar.getEvents(startDate, endDate);
   for (e of events) {
+    var key = getKeyForEvent(e);
+    if (!key) continue;
+
     var t = e.getTag("skeletor");
-    if (!t) {
-      t = tryBuildTagForEvent(e);
-      if (t) e.setTag('skeletor', JSON.stringify(t));
-    } else {
-      t = JSON.parse(t);
-    }
-
     if (t) {
-      e.metadata = t;
-
-      if (!(t.key in eventsByKey)) {
-        eventsByKey[t.key] = [];
+      t = JSON.parse(t);
+      if (t.key != key) {
+        t = null;
       }
-      eventsByKey[t.key].push(e);
     }
+
+    if (!t) {
+      t = buildTagForEvent(e);
+      e.setTag('skeletor', JSON.stringify(t));
+    }
+
+    e.metadata = t;
+    (eventsByKey[key] = eventsByKey[key] || []).push(e);
   }
 
   console.log(JSON.stringify(eventsByKey));
   return eventsByKey;
 }
 
-function tryBuildTagForEvent(e) {
+function getKeyForEvent(e) {
   var desc = e.getDescription();
   let match = (/^skeletor:\s*(.*)$/m).exec(desc);
   if (!match) {
     return null;
   }
 
+  return match[1];
+}
+
+function buildTagForEvent(e, key) {
   return {
-    key: match[1],
+    key: key,
     start_time: e.getStartTime().toISOString(),
   };
 }
