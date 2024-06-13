@@ -59,12 +59,13 @@ change "Google Apps Script API" to "On".
 
    ![Choose Account](https://raw.githubusercontent.com/fowles/skeletor/main/docs/choose_account.png)
 
-1. Click the small gray "Advanced" text acknowledging that this is not a
-   verified app.
+1. Click the small gray "Advanced" text in the lower left, acknowledging that
+   this is not a verified app.
 
    ![Unverified App](https://raw.githubusercontent.com/fowles/skeletor/main/docs/unverified_app.png)
 
-1. Select the small gray text that says "Go to Skeletor (unsafe)".
+1. Select the small gray text that says "Go to Skeletor (unsafe)" in the lower
+   left.
 
    ![Trust Developer](https://raw.githubusercontent.com/fowles/skeletor/main/docs/trust_developer.png)
 
