@@ -41,7 +41,7 @@ change "Google Apps Script API" to "On".
 1. Rename the project from "Unnamed Project" to "Skeletor" by clicking "Unnamed
    Project" at the top.
 1. Replace the entire contents of `Code.gs` (which should contain an empty
-   `myFunction` with the contents of
+   `myFunction`) with the contents of
    [calendar.js](https://raw.githubusercontent.com/fowles/skeletor/main/calendar.js).
 1. Save the project.
 
