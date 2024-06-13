@@ -4,6 +4,10 @@ const skeletorColors = [
   CalendarApp.EventColor.YELLOW,
   CalendarApp.EventColor.MAUVE,
   CalendarApp.EventColor.PALE_BLUE,
+  CalendarApp.EventColor.PALE_GREEN,
+  CalendarApp.EventColor.CYAN,
+  CalendarApp.EventColor.GRAY,
+  CalendarApp.EventColor.GREEN,
 ];
 
 function updateAllSkeletons() {
