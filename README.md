@@ -3,6 +3,30 @@
 Creates and maintains linked skeletons of Google calendar events that rigidly
 move around as a single unit.
 
+## Usage
+
+After installation (see below), calendar events will be grouped into
+"skeletons" based on their "skeletor key".
+
+Any event with `skeletor: <key-name>` will be part of the `<key-name>` skeleton.
+Skeletor will automatically color `skeletons` so you can easily see which ones
+match.  It may reuse colors if you have a lot of skeletor keys though.
+
+### Rigid Event Moves
+
+When you move any event in a skeleton, all of the events in the skeleton will
+adjust times to fit.  Unfortunately, google calendar is a bit slow to update, so
+you may need to count to 5 and then reload your calendar page.
+
+### Errors
+
+If any skeleton has turned red, there is an error with it.  If you feel
+comfortable debugging javascript, go have fun with that.  If you don't, just
+replace each event with a new one you create from scratch.
+
+The most common cause of errors is moving two events in a skeleton before
+skeletor has had a chance to move the entire skeleton.
+
 ## Installation
 
 ### Enable App Script for your gmail account.
